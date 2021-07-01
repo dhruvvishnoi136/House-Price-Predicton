@@ -1,0 +1,97 @@
+body{background-color:black;
+    margin: auto;
+    align-items: center;
+    color: white;
+}
+#header{
+    text-align: center;
+    background-color: rgb(102, 99, 99);
+    padding-bottom: 2%;
+    border-radius: 25px;
+}
+img{
+    width: 50%;
+    height: 500px;
+}
+#footer{
+    position: relative;
+    bottom: 0;
+}
+#inner_cal{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+
+}
+h4{
+    text-align: center;
+    color: white;
+}
+input{
+    padding: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 12px;
+    color: black;
+    border-width: 2px;
+    border-color: white;
+}
+#calculator_button,#calculator_button_pps{
+    padding: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 12px;
+    background-color:rgb(51, 240, 253);
+    color: black;
+    border-width: 2px;
+    border-color: white;
+}
+h1{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    color:white;
+}
+#f1{
+    vertical-align:bottom;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    color:white;
+}
+#parent{
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#childone{
+    float: left;
+}
+select{
+    width: 100%;
+    height: 15%;
+    border-radius: 12px;
+    color: black;
+    border-width: 2px;
+    border-color: white;
+}
+#Go{
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+    
+}
+h6{
+    color: white;
+    height: 10%;
+}
+#space{
+    margin: 60px;
+}

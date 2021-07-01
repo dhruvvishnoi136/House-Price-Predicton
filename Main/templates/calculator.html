@@ -1,0 +1,52 @@
+{%extends "base.html"%}
+{%block Body%}
+<form method="post">
+    <div id="parent">
+        <div id = "childone">
+            <h6 for = "areatype">Area Type :</h6>
+            <select name="areatype" id="areatype" required>
+                <option value="extra" disabled selected>Select your option</option>
+                <option value="0">Super built-up Area</option>
+                <option value="1">Plot Area</option>
+                <option value="2">Carpet Area</option>
+                <option value="3">Built-up Area</option>
+            </select>
+            <br>
+            <h6>Number of Bedrooms :</h6>
+            <input type="number" name="bedroom" id="bedroom" required> 
+            <br>
+            <h6>Number Of Bathrooms :</h6>
+            <input type="number" name="bath" id="bath" required>
+            <h6>Number of society :</h6>
+            <select name="society" id="society" required>
+                <option value="extra" disabled selected>Select your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+        <span id="space"></span>
+        <div id="childstwo">
+            <h6 >Availability :</h6 >
+            <select name="availlability" id="availlability" required>
+                <option value="extra" disabled selected>Select your option</option>
+                <option value="0">Ready To Move</option>
+                <option value="1">Under Construction</option>
+            </select>
+            <br>
+            <h6>Pincode :</h6>
+            <input type="number" name="pincode" id="pincode" required>
+            <br>
+            <h6>Total size in Sqft :</h6>
+            <input type="number" name="total_sqft" id="total_sqft"required>
+        </div>
+    </div>
+    <div id="Go" method="post">
+        <input id  = "calculator_button" type="submit" name="action" value = "Calculate Price" id="Calculate">
+        <span style="width: 10px;"></span>
+        <input id="calculator_button_pps" type = "submit" name = "action" value = "Calculator With Price per Square Feet"> 
+    </div>
+    <div id="Result">
+        <h1 id="predicted_price">{{pridiction}}</h1>
+    </div>
+</form>
+{%endblock%}

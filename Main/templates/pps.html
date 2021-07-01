@@ -1,0 +1,51 @@
+{%extends "base.html"%}
+{%block Body%}
+<form method="post">
+    <div id="parent">
+        <div id = "childone">
+            <h6>Area Type :</h6>
+            <select name="areatype" id="areatype" >
+                <option value="extra" disabled selected>Select your option</option>
+                <option value="Plot Area">Plot Area</option>
+                <option value="Super built-up Area">Super built-up Area</option>
+                <option value="Carpet Area">Carpet Area</option>
+                <option value="Built-up Area">Built-up Area</option>
+            </select>
+            <br>
+            <h6>Number of Bedrooms :</h6>
+            <input type="number" name="bedroom" id="bedroom">
+            <br>
+            <h6>Number Of Bathrooms :</h6>
+            <input type="number" name="bath" id="bath">
+            <h6>Number of Balconies :</h6>
+            <input type="number" name="balcony" id="balcony">
+        </div>
+        <span id="space"></span>
+        <div id="childstwo">
+            <h6>Availability :</h6>
+            <select name="availlability" id="availlability">
+                <option value="extra" disabled selected>Select your option</option>
+                <option value="READY TO MOVE">Ready To Move</option>
+                <option value="Under Construction">Under Construction</option>
+            </select>
+            <br>
+            <h6>Location :</h6>
+            <input type="text" name="location" id="location">
+            <br>
+            <h6>Total size in Sqft :</h6>
+            <input type="number" name="total_sqft" id="total_sqft">
+            <br>
+            <input type="checkbox" name="pps" value="Checkyy">
+            <!-- <h6 hidden='False'>Price Per Square Feets :</h6> -->
+            {%if bol == "Flase"%}
+            <input type="text" name="price_per_sqft" id="price_per_sqft" value="">
+        </div>
+    </div>
+    <div id="Go">
+        <button onclick = "" type="submit" name="Calculate Price" value = "Calculate price"id="Calculate">Calculate price</button>
+    </div>
+    <div id="Result">
+        <h1 id="predicted_price">{{prediction}}</h1>
+    </div>
+</form>
+{%endblock%}
