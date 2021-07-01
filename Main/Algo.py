@@ -93,7 +93,7 @@ class Algos:
         X_train, X_test, Y_train, Y_test = train_test_split(x, y , test_size=0.1, random_state=4)
         knn = KNeighborsRegressor(n_neighbors=1)
         Price_pridict_trainer = knn.fit(X_train , Y_train)
-        pickle.dump(Price_pridict_trainer , open("Knn_model.pkl", 'wb'))
+        pickle.dump(Price_pridict_trainer , open("./Main/Knn_model.pkl", 'wb'))
         if self.allow_test == "1":
             return (Price_pridict_trainer.score(X_test , Y_test))*100
         else:
@@ -107,19 +107,19 @@ class Algos:
         X_train, X_test, Y_train, Y_test = train_test_split(x, y , test_size=0.2 , random_state=2)
         random = RandomForestRegressor(n_estimators=117, random_state=0)
         Price_per_sqft_trainer = random.fit(X_train , Y_train.ravel())
-        pickle.dump(Price_per_sqft_trainer ,open("Random_model.pkl" , 'wb'))
+        pickle.dump(Price_per_sqft_trainer ,open("./Main/Random_model.pkl" , 'wb'))
         if self.allow_test == "1":
             return (Price_per_sqft_trainer.score(X_test , Y_test))*100
         else:
             pass
 
     def knn_predict(self):
-        knn_model = pickle.load(open('knn_model.pkl' , 'rb'))
+        knn_model = pickle.load(open('./Main/knn_model.pkl' , 'rb'))
         return knn_model.predict([[self.area_type,self.availability,self.location,self.size,self.society,self.sqft,self.bath]])
 
 
     def random_predict(self):
-        random_model = pickle.load(open('random_model.pkl' , 'rb'))
+        random_model = pickle.load(open('./Main/random_model.pkl' , 'rb'))
         return str((random_model.predict([[self.area_type,self.availability,self.location,self.size,self.society,self.sqft,self.bath,self.pps]])[0]))
 
 
